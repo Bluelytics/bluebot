@@ -56,8 +56,6 @@ def blue(bot, update):
         res = r.json()
 
         bot.sendMessage(update.message.chat_id, text='Dolar Oficial - Venta: %.2f, Compra: %.2f\n' % (res['oficial']['value_sell'], res['oficial']['value_buy']) \
-                                                    + 'Dolar Ahorro - Venta: %.2f, Compra: %.2f\n' % (res['oficial']['value_sell']*1.2, res['oficial']['value_buy']*1.2) \
-                                                    + 'Dolar Tarjeta - Venta: %.2f, Compra: %.2f\n' % (res['oficial']['value_sell']*1.35, res['oficial']['value_buy']*1.35) \
                                                     + 'Dolar Blue - Venta: %.2f, Compra: %.2f\n' % (res['blue']['value_sell'], res['blue']['value_buy'])
                                                  )
     else:
